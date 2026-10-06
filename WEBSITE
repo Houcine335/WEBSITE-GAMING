@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="title">Game Core</h1>
+
+    <nav>
+        <a href="store/store.html">Store</a>
+        <a href="#games">Games</a>
+        <a href="#">About</a>
+        <a href="#">Support</a>
+        <a href="#" id="SearchBtn">Search</a>
+        <input type="search" id="SearchBar">
+    </nav>
+
+
+
+
+<h1 id="rec">Recommendation </h1>
+
+<section class="hero">
+    <div class="slide active">
+    <div class="hero-content">
+         <img src="games\gta v logo.png"
+             alt="GTA V logo"
+             class="game-logo">
+
+        <p> Now Availble</p>
+        <h2> Grand Theft Auto V</h2>
+        <div class="price">
+            <span>19.99</span>
+            <button>♡</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+    </div>
+   
+</section>
+
+
+<h2>Games for sell </h2>
+<section id="games">
+
+<div class="games">
+
+    <div class="game">
+        <img src="games\god of war.jpg">
+        <a href="gamesbuy/godofwar.html"><h3>God Of war</h3></a>
+        <p class="price">2.99$</p>
+    </div>
+
+    <div class="game">
+        <img src="games\Resident_Evil_3.jpg">
+        <h3>Resident evil 3</h3>
+        <p class="price">20.99$</p>
+    </div>
+
+</div>
+</section>
+</body>
+
+
+</html>
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(51, 5, 24);
+    background-image: url(background.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+nav{
+    background-color: rgb(61, 40, 61);
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 15px;
+
+}
+
+nav a{
+    color: antiquewhite;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    transition: 0.3ms;
+
+}
+
+nav a:hover{
+    color: black;
+    
+}
+
+
+h1{
+    text-align: center;
+    color: rgb(131, 11, 121);
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+
+h1.game:hover{
+    color: black;
+
+}
+
+
+.games {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.game {
+    width: 220px;
+    background: #24113d;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.game:hover {
+    transform: translateY(-8px);
+}
+
+.game img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.game h3 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    font-size: 18px;
+}
+.price {
+    color: #c084fc;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+
+    background-image:
+        /* Bottom dark fade */
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 25%,
+            rgba(0, 0, 0, 0.15) 45%,
+            rgba(0, 0, 0, 0.55) 75%,
+            rgba(0, 0, 0, 0.92) 100%
+        ),
+
+        /* Left + right subtle vignette */
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.25),
+            transparent 20%,
+            transparent 80%,
+            rgba(0, 0, 0, 0.25)
+        ),
+
+        url("https://cdn2.steamgriddb.com/hero_thumb/48a0fbc23cf60d3a99d3e4e233243fa0.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 20px;
+
+    color: white;
+    z-index: 2;
+}
+
+.hero-content p {
+    font-size: 14px;
+    margin: 0 0 8px;
+    color: #ddd;
+}
+
+.hero-content h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 12px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+.game-logo {
+    width: 160px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.7));
+}
+.game-info {
+    flex: 1;
+}
+
+.game-info p {
+    margin: 0 0 5px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.game-info h1 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.price span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.price button {
+    height: 48px;
+    padding: 0 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+
+
+    font-size: 20px;
+    cursor: pointer;
+
+    backdrop-filter: blur(6px);
+
+    transition: 0.25s ease;
+}
+
+.price button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.price .cart {
+    background: #9cff00;
+    color: #111;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.price .cart:hover {
+    background: #b5ff45;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    background: #111;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+    transform: scale(1.03);
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.game-bg {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    position: absolute;
+    inset: 0;
+}
